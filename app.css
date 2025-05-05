@@ -1,0 +1,98 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background:#fdcece;
+    color: #333;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h2, p {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+button, select {
+    background: #ff6f61;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-width: 160px;
+}
+
+button:hover, select:hover {
+    background: #fa6b64;
+    transform: scale(1.05);
+}
+
+#ice_creamBox {
+    margin-top: 60px;
+}
+
+#ice_creamBox img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 50%;
+    border-color: black;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    animation: wiggle 0.5s ease-in-out;
+}
+
+#ice_creamBox img:hover {
+    transform: scale(1.15);
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+body.dark-mode {
+    background:#121212;
+    color: #ffffff;
+}
+
+.dark-mode .button-group button,
+.dark-mode .button-group select {
+    background:  #800000 ;
+    color: white;
+}
+
+.dark-mode .button-group button:hover,
+.dark-mode .button-group select:hover {
+    background:maroon;
+}
+
+.dark-mode #ice_creamBox img {
+    box-shadow: 1px 4px 8px rgba(255, 255, 255, 0.3);
+}
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    z-index: 100;  
+    background: #333; 
+    color: white;
+  }
